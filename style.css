@@ -278,6 +278,10 @@ select {
       border-radius: 0;
     }
   }
+
+  [aria-controls="primary-nav"] {
+    display: none;
+  }
     .primary-navigation {
     ul {
     display: flex;
@@ -293,6 +297,8 @@ select {
   }
 
   @media (width < 760px) {
+    display: none;
+
     position: absolute;
     z-index: 10;
     top: 0;
@@ -316,6 +322,15 @@ select {
     }
   }
   
+}
+
+@media (width < 760px) {
+  [aria-controls="primary-nav"] {
+    display: block;
+  }
+  [aria-expanded="true"] + .primary-navigation {
+    display: block;
+  }
 }
 
 
