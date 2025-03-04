@@ -355,7 +355,7 @@ select {
     text-align: center;
     font-size: var(--font-size-md);
     color: var(--text-high-contrast);
-    background-image: url(/assets/hero.webp);
+    background-image: url(assets/hero.webp);
     background-size: cover;
     background-position: center;
   }
