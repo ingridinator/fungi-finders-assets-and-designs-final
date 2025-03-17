@@ -78,9 +78,10 @@
         </div>
         </section>
 
-        <section class="section mushroom-guide">
+        <section class="mushroom-guide section">
           <div class="wrapper flow">
             <h2 class="section-title">Get to know your mushrooms</h2>
+          <div class="flex-group">
             <select>
               <option value="all">Season: all</option>
               <option value="spring">Spring</option>
@@ -92,21 +93,25 @@
               <option value="edible">Edible</option>
               <option value="toxic">Toxic</option>
             </select>
-
+          </div>
             <!-- grid of mushrooms -->
             <div class="grid-auto-fit">
               <!-- 12 cards here -->
                <div class="card">
                 <h3 class="card__title">Chanterelle</h3>
-                <ul role="list" aria-label="Mushroom characteristics">
-                  <li data-edible="edible"></li>
-                  <span class="visually-hidden">This mushroom is</span>
+                <ul class="tag-list" role="list" aria-label="Mushroom characteristics">
+                  <li data-edible="edible">
+                    <span class="visually-hidden">This mushroom is</span>
                   edible
+                  </li>
+                  
 
-                  <li data-season="summer"></li>
-                  <span class="visually-hidden"
+                  <li data-season="summer">
+                    <span class="visually-hidden"
                     >You can harvest this mushroom in the</span>
                     summer
+                  </li>
+                  
               </ul>
               <p>Golden-yellow, funnel-shaped mushroom with false gills.
               </p>

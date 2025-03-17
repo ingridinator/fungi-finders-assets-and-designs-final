@@ -194,6 +194,13 @@ select {
 }
 
 @layer layout {
+
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
   /* selects all siblings of an element, except the first one */
   .flow > * + * {
     margin-block-start: var(--flow-space, 1em);
@@ -380,8 +387,15 @@ select {
     }
   }
 
+  .mushroom-guide {
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-color: var(--text-high-contrast);
+    --card-gap: 0.75rem;
+  }
+
   .card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--card-gap, 1rem);
     padding: 1rem;
     background-color: var(--background-light);
@@ -400,6 +414,44 @@ select {
     var(--text-brand));
   }
 
+  .card__note {
+    background-color: var(--background-extra-light);
+    padding: .75rem;
+    border-radius: var(--border-radius-2);
+    margin-block-start: auto;
+  }
+
+  .tag-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    li {
+      font-family: var(--ff-heading);
+      font-size: var(--font-size-sm);
+      color: var(--text-high-contrast);
+      padding: 0.rem 0.25rem;
+      
+      border-radius: var(--border-radius-1);
+    }
+
+    [data-edible="edible"] {
+      background-color: var(--background-accent-main);
+    }
+    [data-edible="toxic"] {
+      background-color: var(--clr-red-500);
+    }
+    [data-season="summer"] {
+      background-color: var(--background-accent-main);
+    }
+    [data-season="spring"] {
+      background-color: var(--clr-teal-500);
+    }
+    [data-season="fall"] {
+      background-color: var(--clr-orange-500);
+    }
+  }
+
   .button {
     display: inline-flex;
     padding: 0.5rem 1rem;
@@ -416,6 +468,14 @@ select {
   .button:focus-visible {
     color: var(--text-high-contrast);
     background-color: var(--background-accent-light);
+  }
+
+  select {
+    padding: 0.5rem 1rem;
+    background-color: var(--background-accent-main);
+    border: 0;
+    border-radius: var(--border-radius-2);
+    color: var(--text-high-contrast);
   }
 
   .site-footer {
