@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js" defer></script>
+    <script src="mushroom-filter.js" defer></script>
     <title>FungiFinders</title>
 </head>
 <body>
@@ -82,20 +83,20 @@
           <div class="wrapper flow">
             <h2 class="section-title">Get to know your mushrooms</h2>
           <div class="flex-group">
-            <select>
+            <select name="season" id="season" hidden>
               <option value="all">Season: all</option>
               <option value="spring">Spring</option>
               <option value="summer">Summer</option>
               <option value="fall">Fall</option>
             </select>
-            <select>
+            <select name="edible" id="edible" hidden>
               <option value="all">Type: all</option>
               <option value="edible">Edible</option>
               <option value="toxic">Toxic</option>
             </select>
           </div>
             <!-- grid of mushrooms -->
-            <div class="grid-auto-fit">
+            <div class="grid-auto-fill">
               <!-- 12 cards here -->
                <div class="card">
                 <h3 class="card__title">Chanterelle</h3>
@@ -408,6 +409,7 @@
               </p>
             </div>
             </div>
+            <div class="no-matches" hidden>No matches for these filters</div>
           </div>
         </section>
 

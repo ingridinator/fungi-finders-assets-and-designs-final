@@ -218,12 +218,12 @@
       gap: var(--grid-flow-gap, 1rem);
     }
   
-    .grid-auto-fit {
+    .grid-auto-fill {
       --af-min-col-size: 250px;
       display: grid;
       gap: 1rem;
       grid-template-columns: 
-        repeat(auto-fit, minmax(min(var(--af-min-col-size), 100%), 1fr));
+        repeat(auto-fill, minmax(min(var(--af-min-col-size), 100%), 1fr));
     }
   
   
@@ -569,9 +569,15 @@
       font-family: var(--ff-heading);
       font-weight: 700;
     }
+
+  }
   
   
   @layer utilities {
+    
+      [hidden] {
+        display: none;
+      }
       .visually-hidden {
           clip: rect(0 0 0 0);
           clip-path: inset(50%);
@@ -637,4 +643,5 @@
   
   
   
-    }
+    
+
